@@ -19,7 +19,7 @@ int lstat(const char *file_name, struct stat *buf)
 }
 libc_hidden_def(lstat)
 
-#elif __WORDSIZE == 64 && defined __NR_newfstatat
+#elif /* __WORDSIZE == 64 && */defined __NR_newfstatat
 # include <fcntl.h>
 
 int lstat(const char *file_name, struct stat *buf)

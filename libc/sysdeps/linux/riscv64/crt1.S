@@ -52,6 +52,12 @@ _start:
 	la   a0, main
 	REG_L a1, 0(sp)      /* argc.  */
 	addi  a2, sp, SZREG  /* argv.  */
+
+	REG_L a2, 0(a2)
+#if 0	
+	mv    a3, zero
+	mv    a4, zero
+#endif
 	andi  sp, sp, ALMASK /* Align stack. */
 	mv    a6, sp  /* stack_end.  */
 

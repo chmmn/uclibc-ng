@@ -20,7 +20,7 @@
 #include "malloc.h"
 #include "heap.h"
 
-
+#define MAP_UNINITIALIZED 0
 /* The malloc heap.  We provide a bit of initial static space so that
    programs can do a little mallocing without mmaping in more space.  */
 HEAP_DECLARE_STATIC_FREE_AREA (initial_fa, 256);
